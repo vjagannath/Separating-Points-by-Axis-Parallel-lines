@@ -12,9 +12,9 @@ Measure: Minimize |S|.
 1. Generate arbitrary feasible solution by drawing vertical lines between every consecutive point’s.
 2. Sort the list of vertical lines from the current feasible solution based on intercept value.
 3. For every pair of vertical lines from the sorted list, check if a new horizontal line can replace it.
-a. Gather the points that get connected by simulating removal of these two lines.
-b. Check if these points are separated by any existing horizontal line or it can be separated by adding a new horizontal line.
-c. If the above condition is satisfied, remove the two vertical lines, and add the new horizontal line if required.
+  a. Gather the points that get connected by simulating removal of these two lines.
+  b. Check if these points are separated by any existing horizontal line or it can be separated by adding a new horizontal line.
+  c. If the above condition is satisfied, remove the two vertical lines, and add the new horizontal line if required.
 4. Repeat the Step 2-3 for all horizontal lines.
 5. Print the final list of vertical and horizontal lines generated in Step 2-3.
 
@@ -38,15 +38,15 @@ Output: Set S of vertical or horizontal lines, each given by the direction and o
 Measure: Minimize |S|.
 1. Generate horizontal and vertical lines between every two pairs of points.
 2. For every vertical line from the list
-a. Commit the line to the list of final lines if it separates at least one point on either side of the line such that these points are not separated by any other line.
+  a. Commit the line to the list of final lines if it separates at least one point on either side of the line such that these points are      not separated by any other line.
 3. Repeat Step 3 for horizontal lines.
 4. Optimize the final list of lines by finding and removing the redundant horizontal and vertical lines.
-a. Sort the list of vertical and horizontal lines generated in Step 2-3 based on the intercept value.
-b. For every vertical line, gather the points between the previous vertical line and next vertical line.
-c. Sort the points based on y value.
-d. Check if these points are separated by any existing horizontal line.
-e. If yes, then uncommit this line from the final list of lines.
-f. Repeat Step 4.b - 4.e for all the horizontal lines.
+  a. Sort the list of vertical and horizontal lines generated in Step 2-3 based on the intercept value.
+  b. For every vertical line, gather the points between the previous vertical line and next vertical line.
+  c. Sort the points based on y value.
+  d. Check if these points are separated by any existing horizontal line.
+  e. If yes, then uncommit this line from the final list of lines.
+  f. Repeat Step 4.b - 4.e for all the horizontal lines.
 5. Print the final optimized list of vertical and horizontal lines.
 
 Analysis:
